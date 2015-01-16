@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Air Parcel View</title>
+<link rel="stylesheet" href="css/app.css"/>
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+<script src="js/app.js"></script>
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+
+
+<body onload="begin()">
+	<div id="wrap">
+
+
+		<div id="buttons" style="width:885px;height:70px">
+			<img src="image/testbutton.png" alt="testbutton" style="width:173px;height:67.5px" onclick="test()" draggable="false" class="testbutton">
+			<img src="image/undo.png" alt="undo" style="width:173px;height:67.5px" onclick="undo()" draggable="false" class="undo">
+		</div>
+
+		<div id="atmosphere">
+
+			<img src="image/atmosphere.png" alt="atmosphere" style="width:885px;height:615px" draggable="false" class="atmosphere">
+
+			<div id="altitude">
+				<div id="div1" style="width:825px;height:92.5px" ondrop="drop(event)" ondragover="allowDrop(event)" ondragleave="dragLeave(event)" class="div">
+					<p id="dist1" class="dist" style="width:50px">30km</p>
+					<hr id="divider1" class="divider">
+					<p id="atmotemp1" class="atmotemp">-50°C</p>
+				</div>
+				<div id="div2" style="width:825px;height:92.5px" ondrop="drop(event)" ondragover="allowDrop(event)" ondragleave="dragLeave(event)" class="div">
+					<p id="dist2" class="dist" style="width:50px">25km</p>
+					<hr id="divider2" class="divider">
+					<p id="atmotemp2" class="atmotemp">-40°C</p>
+				</div>
+				<div id="div3" style="width:825px;height:92.5px" ondrop="drop(event)" ondragover="allowDrop(event)" ondragleave="dragLeave(event)" class="div">
+					<p id="dist3" class="dist" style="width:50px">20km</p>
+					<hr id="divider3" class="divider">
+					<p id="atmotemp3" class="atmotemp">-30°C</p>
+				</div>				
+				<div id="div4" style="width:825px;height:92.5px" ondrop="drop(event)" ondragover="allowDrop(event)" ondragleave="dragLeave(event)" class="div">
+					<p id="dist4" class="dist" style="width:50px">15km</p>
+					<hr id="divider4" class="divider">
+					<p id="atmotemp4" class="atmotemp">-20°C</p>
+				</div>				
+				<div id="div5" style="width:825px;height:92.5px" ondrop="drop(event)" ondragover="allowDrop(event)" ondragleave="dragLeave(event)" class="div">
+					<p id="dist5" class="dist" style="width:50px">10km</p>
+					<hr id="divider5" class="divider">
+					<p id="atmotemp5" class="atmotemp">-10°C</p>
+				</div>				
+				<div id="div6" style="width:825px;height:92.5px" ondrop="drop(event)" ondragover="allowDrop(event)" ondragleave="dragLeave(event)" class="div">
+					<p id="dist6" class="dist" style="width:50px">5km</p>
+					<hr id="divider6" class="divider">
+					<p id="atmotemp6" class="atmotemp">0°C</p>
+				</div>				
+			</div>
+
+		</div>
+
+
+		<div id="panel">
+			<img src="image/panel.png" alt="panel" style="width:210px;height:615px" draggable="false" class="panel">
+
+			<div id="moistureslider" class="moistureslider" style="width:228px">
+				<input type="range" name="moisture" id="moisture" step="1" value="0" min="0" max="3" class="ui-hidden-accessible" data-mini="false" data-highlight="true"/>
+			</div>
+
+			<div id="tempslider" class="tempslider" style="width:228px">
+				<input type="range" data-show-value="true" name="temp" id="temp" value="0" min="0" max="60" class="ui-hidden-accessible" data-mini="false" data-highlight="true"/>
+			</div>
+
+			<div id="genbutton" class="button">
+				<img src="image/genbutton.png" alt="genbutton" style="width:180px;height:64px" onclick="gen()" draggable="false">
+			</div>
+
+			<div id="resetbutton" class="button">
+				<img src="image/resetbutton.png" alt="resetbutton" style="width:180px;height:64px" onclick="reset()" draggable="false">
+			</div>
+			
+			<div id="parcel" class="parcel">
+				<img src="image/parcel.png" alt="parcel" style="width:90px;height:90px" ondragstart="drag()" id="parcelpic" draggable="false">
+				<p id="temptext" style="width:35px"></p>
+			</div>
+
+		</div>
+
+</body>
+
+</html>
