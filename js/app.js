@@ -40,7 +40,7 @@ function drop(ev) {
         var imageToReplace = document.getElementById(id);
         newimage.style.position = "relative";
         newimage.style.left = "600px";
-        newimage.style.top = "-99px";
+        newimage.style.top = "-64px";
         imageToReplace.appendChild(newimage);
         atmotemp = document.getElementsByClassName("atmotemp");
     }
@@ -107,7 +107,7 @@ function reset() {
         if (parcel.parentNode.id != "panel") {
             parcel.style.position = 'relative';
             parcel.style.left = '59px';
-            parcel.style.top = '-365px';
+            parcel.style.top = '-415px';
             document.getElementById("panel").appendChild(parcel);
         }
         tested = 0;
@@ -130,21 +130,21 @@ function test() {
                 if (weather != 0) {
                     // make arrows
                     var arrow0=document.createElement("img");
-                    arrow0.src = "image/arrow0.png";
-                    arrow0.style.width = '143px';
-                    arrow0.style.height = '76.7px';
+                    arrow0.src = "image/arrow50.png";
+                    arrow0.style.width = '139px';
+                    arrow0.style.height = '142px';
                     arrow0.setAttribute('draggable', false);
                     arrow0.style.position = 'relative';
-                    arrow0.style.left = '-27px';
-                    arrow0.style.top = '-134px';
+                    arrow0.style.left = '-23px';
+                    arrow0.style.top = '-165px';
                     var arrow=document.createElement("img");
-                    arrow.src = "image/arrow.png";
-                    arrow.style.width = '165px';
-                    arrow.style.height = '88.5px';
+                    arrow.src = "image/arrow5.png";
+                    arrow.style.width = '168px';
+                    arrow.style.height = '171px';
                     arrow.setAttribute('draggable', false);
                     arrow.style.position = 'relative';
-                    arrow.style.left = '-41px';
-                    arrow.style.top = '-143px';
+                    arrow.style.left = '-39px';
+                    arrow.style.top = '-180px';
 
                     // wiggling
                     parcel.appendChild(arrow0);
@@ -153,189 +153,196 @@ function test() {
                         parcel.replaceChild(arrow, arrow0);
                         setTimeout(function()
                         {
-                            parcel.replaceChild(arrow0, arrow);
+                            parcel.removeChild(arrow);
                             setTimeout(function()
                             {
-                                parcel.replaceChild(arrow, arrow0);
+                                parcel.appendChild(arrow0);
                                 setTimeout(function()
                                 {
-                                    parcel.replaceChild(arrow0, arrow);
+                                    parcel.replaceChild(arrow, arrow0);
                                     setTimeout(function()
                                     {
-                                        parcel.replaceChild(arrow, arrow0);
+                                        parcel.removeChild(arrow);
+                                        setTimeout(function()
+                                        {
+                                            parcel.appendChild(arrow0);
+                                            setTimeout(function()
+                                            {
+                                                parcel.replaceChild(arrow, arrow0);
+                                                setTimeout(function()
+                                                {
+                                                    parcel.removeChild(arrow);
 
-                                        // cloud
-                                        if (weather == 1) {
-                                            var cloud=document.createElement("img");
-                                            cloud.src = "image/cloud.png";
-                                            cloud.style.width = '110px';
-                                            cloud.style.height = '66px';
-                                            cloud.setAttribute('draggable', false);
-                                            cloud.style.position = 'relative';
-                                            cloud.style.top = '10px';
-                                            cloud.style.left = '-10px';
-                                            setTimeout(function()
-                                            {
-                                                parcel.replaceChild(cloud, parcel.childNodes[1]);
-                                                document.getElementById("temptext").innerHTML = null;
-                                                parcel.removeChild(parcel.childNodes[5]);
-                                                waiting=0;
-                                                tested=1;
-                                            }, 600);
-                                        // larger cloud
-                                        } else if (weather == 2) {
-                                            var cloud0=document.createElement("img");
-                                            cloud0.src = "image/cloud0.png";
-                                            cloud0.style.width = '110px';
-                                            cloud0.style.height = '55px';
-                                            cloud0.setAttribute('draggable', false);
-                                            cloud0.style.position = 'relative';
-                                            cloud0.style.top = '15px';
-                                            cloud0.style.left = '-10px';
-                                            setTimeout(function()
-                                            {
-                                                parcel.replaceChild(cloud0, parcel.childNodes[1]);
-                                                document.getElementById("temptext").innerHTML = null;
-                                                parcel.removeChild(parcel.childNodes[5]);
-                                                waiting=0;
-                                                tested=1;
-                                            }, 600);
-                                        } else if (weather == 3) {
-                                            var cloud0=document.createElement("img");
-                                            cloud0.src = "image/cloud0.png";
-                                            cloud0.style.width = '110px';
-                                            cloud0.style.height = '56.9px';
-                                            cloud0.setAttribute('draggable', false);
-                                            cloud0.style.position = 'relative';
-                                            cloud0.style.top = '2px';
-                                            cloud0.style.left = '-10px';
-                                            var rain=document.createElement("img");
-                                            rain.src = "image/rain.png";
-                                            rain.style.width = '110px';
-                                            rain.style.height = '83px';
-                                            rain.setAttribute('draggable', false);
-                                            rain.style.position = 'relative';
-                                            rain.style.top = '2px';
-                                            rain.style.left = '-10px';
-                                            setTimeout(function()
-                                            {
-                                                parcel.replaceChild(cloud0, parcel.childNodes[1]);
-                                                document.getElementById("temptext").innerHTML = null;
-                                                parcel.removeChild(parcel.childNodes[5]);
-                                                setTimeout(function()
-                                                {
-                                                    parcel.replaceChild(rain, cloud0);
-                                                    setTimeout(function()
-                                                    {
-                                                        parcel.replaceChild(cloud0, rain);
+                                                    // cloud
+                                                    if (weather == 1) {
+                                                        var cloud=document.createElement("img");
+                                                        cloud.src = "image/cloud.png";
+                                                        cloud.style.width = '110px';
+                                                        cloud.style.height = '66px';
+                                                        cloud.setAttribute('draggable', false);
+                                                        cloud.style.position = 'relative';
+                                                        cloud.style.top = '10px';
+                                                        cloud.style.left = '-10px';
                                                         setTimeout(function()
                                                         {
-                                                            parcel.replaceChild(rain, cloud0);
+                                                            parcel.replaceChild(cloud, parcel.childNodes[1]);
+                                                            document.getElementById("temptext").innerHTML = null;
+                                                            waiting=0;
+                                                            tested=1;
+                                                        }, 600);
+                                                    // larger cloud
+                                                    } else if (weather == 2) {
+                                                        var cloud0=document.createElement("img");
+                                                        cloud0.src = "image/cloud0.png";
+                                                        cloud0.style.width = '110px';
+                                                        cloud0.style.height = '55px';
+                                                        cloud0.setAttribute('draggable', false);
+                                                        cloud0.style.position = 'relative';
+                                                        cloud0.style.top = '15px';
+                                                        cloud0.style.left = '-10px';
+                                                        setTimeout(function()
+                                                        {
+                                                            parcel.replaceChild(cloud0, parcel.childNodes[1]);
+                                                            document.getElementById("temptext").innerHTML = null;
+                                                            waiting=0;
+                                                            tested=1;
+                                                        }, 600);
+                                                    } else if (weather == 3) {
+                                                        var cloud0=document.createElement("img");
+                                                        cloud0.src = "image/cloud0.png";
+                                                        cloud0.style.width = '110px';
+                                                        cloud0.style.height = '56.9px';
+                                                        cloud0.setAttribute('draggable', false);
+                                                        cloud0.style.position = 'relative';
+                                                        cloud0.style.top = '2px';
+                                                        cloud0.style.left = '-10px';
+                                                        var rain=document.createElement("img");
+                                                        rain.src = "image/rain.png";
+                                                        rain.style.width = '110px';
+                                                        rain.style.height = '83px';
+                                                        rain.setAttribute('draggable', false);
+                                                        rain.style.position = 'relative';
+                                                        rain.style.top = '2px';
+                                                        rain.style.left = '-10px';
+                                                        setTimeout(function()
+                                                        {
+                                                            parcel.replaceChild(cloud0, parcel.childNodes[1]);
+                                                            document.getElementById("temptext").innerHTML = null;
                                                             setTimeout(function()
                                                             {
-                                                                parcel.replaceChild(cloud0, rain);
+                                                                parcel.replaceChild(rain, cloud0);
                                                                 setTimeout(function()
                                                                 {
-                                                                    parcel.replaceChild(rain, cloud0);
-                                                                    waiting=0;
-                                                                    tested=1;
+                                                                    parcel.replaceChild(cloud0, rain);
+                                                                    setTimeout(function()
+                                                                    {
+                                                                        parcel.replaceChild(rain, cloud0);
+                                                                        setTimeout(function()
+                                                                        {
+                                                                            parcel.replaceChild(cloud0, rain);
+                                                                            setTimeout(function()
+                                                                            {
+                                                                                parcel.replaceChild(rain, cloud0);
+                                                                                waiting=0;
+                                                                                tested=1;
+                                                                            }, 600);
+                                                                        }, 600);
+                                                                    }, 600);
                                                                 }, 600);
                                                             }, 600);
                                                         }, 600);
-                                                    }, 600);
-                                                }, 600);
-                                            }, 600);
-                                        } else if (weather == 4) {
-                                            var cloud0=document.createElement("img");
-                                            cloud0.src = "image/cloud0.png";
-                                            cloud0.style.width = '110px';
-                                            cloud0.style.height = '55px';
-                                            cloud0.setAttribute('draggable', false);
-                                            cloud0.style.position = 'relative';
-                                            cloud0.style.top = '-1px';
-                                            cloud0.style.left = '-10px';
-                                            var rain0=document.createElement("img");
-                                            rain0.src = "image/rain0.png";
-                                            rain0.style.width = '110px';
-                                            rain0.style.height = '90px';
-                                            rain0.setAttribute('draggable', false);
-                                            rain0.style.position = 'relative';
-                                            rain0.style.top = '-1px';
-                                            rain0.style.left = '-10px';
-                                            setTimeout(function()
-                                            {
-                                                parcel.replaceChild(cloud0, parcel.childNodes[1]);
-                                                document.getElementById("temptext").innerHTML = null;
-                                                parcel.removeChild(parcel.childNodes[5]);
-                                                setTimeout(function()
-                                                {
-                                                    parcel.replaceChild(rain0, cloud0);
-                                                    setTimeout(function()
-                                                    {
-                                                        parcel.replaceChild(cloud0, rain0);
+                                                    } else if (weather == 4) {
+                                                        var cloud0=document.createElement("img");
+                                                        cloud0.src = "image/cloud0.png";
+                                                        cloud0.style.width = '110px';
+                                                        cloud0.style.height = '55px';
+                                                        cloud0.setAttribute('draggable', false);
+                                                        cloud0.style.position = 'relative';
+                                                        cloud0.style.top = '-1px';
+                                                        cloud0.style.left = '-10px';
+                                                        var rain0=document.createElement("img");
+                                                        rain0.src = "image/rain0.png";
+                                                        rain0.style.width = '110px';
+                                                        rain0.style.height = '90px';
+                                                        rain0.setAttribute('draggable', false);
+                                                        rain0.style.position = 'relative';
+                                                        rain0.style.top = '-1px';
+                                                        rain0.style.left = '-10px';
                                                         setTimeout(function()
                                                         {
-                                                            parcel.replaceChild(rain0, cloud0);
+                                                            parcel.replaceChild(cloud0, parcel.childNodes[1]);
+                                                            document.getElementById("temptext").innerHTML = null;
                                                             setTimeout(function()
                                                             {
-                                                                parcel.replaceChild(cloud0, rain0);
+                                                                parcel.replaceChild(rain0, cloud0);
                                                                 setTimeout(function()
                                                                 {
-                                                                    parcel.replaceChild(rain0, cloud0);
-                                                                    waiting=0;
-                                                                    tested=1;
+                                                                    parcel.replaceChild(cloud0, rain0);
+                                                                    setTimeout(function()
+                                                                    {
+                                                                        parcel.replaceChild(rain0, cloud0);
+                                                                        setTimeout(function()
+                                                                        {
+                                                                            parcel.replaceChild(cloud0, rain0);
+                                                                            setTimeout(function()
+                                                                            {
+                                                                                parcel.replaceChild(rain0, cloud0);
+                                                                                waiting=0;
+                                                                                tested=1;
+                                                                            }, 600);
+                                                                        }, 600);
+                                                                    }, 600);
                                                                 }, 600);
                                                             }, 600);
                                                         }, 600);
-                                                    }, 600);
-                                                }, 600);
-                                            }, 600);
-                                        } else if (weather == 5) {
-                                            var cloud0=document.createElement("img");
-                                            cloud0.src = "image/cloud0.png";
-                                            cloud0.style.width = '109.5px';
-                                            cloud0.style.height = '55px';
-                                            cloud0.setAttribute('draggable', false);
-                                            cloud0.style.position = 'relative';
-                                            cloud0.style.top = '-1px';
-                                            cloud0.style.left = '-9.7px';
-                                            var storm=document.createElement("img");
-                                            storm.src = "image/storm.png";
-                                            storm.style.width = '110px';
-                                            storm.style.height = '90px';
-                                            storm.setAttribute('draggable', false);
-                                            storm.style.position = 'relative';
-                                            storm.style.top = '-1px';
-                                            storm.style.left = '-10px';
-                                            setTimeout(function()
-                                            {
-                                                parcel.replaceChild(cloud0, parcel.childNodes[1]);
-                                                document.getElementById("temptext").innerHTML = null;
-                                                parcel.removeChild(parcel.childNodes[5]);
-                                                setTimeout(function()
-                                                {
-                                                    parcel.replaceChild(storm, cloud0);
-                                                    setTimeout(function()
-                                                    {
-                                                        parcel.replaceChild(cloud0, storm);
+                                                    } else if (weather == 5) {
+                                                        var cloud0=document.createElement("img");
+                                                        cloud0.src = "image/cloud0.png";
+                                                        cloud0.style.width = '109.5px';
+                                                        cloud0.style.height = '55px';
+                                                        cloud0.setAttribute('draggable', false);
+                                                        cloud0.style.position = 'relative';
+                                                        cloud0.style.top = '-1px';
+                                                        cloud0.style.left = '-9.7px';
+                                                        var storm=document.createElement("img");
+                                                        storm.src = "image/storm.png";
+                                                        storm.style.width = '110px';
+                                                        storm.style.height = '90px';
+                                                        storm.setAttribute('draggable', false);
+                                                        storm.style.position = 'relative';
+                                                        storm.style.top = '-1px';
+                                                        storm.style.left = '-10px';
                                                         setTimeout(function()
                                                         {
-                                                            parcel.replaceChild(storm, cloud0);
+                                                            parcel.replaceChild(cloud0, parcel.childNodes[1]);
+                                                            document.getElementById("temptext").innerHTML = null;
                                                             setTimeout(function()
                                                             {
-                                                                parcel.replaceChild(cloud0, storm);
+                                                                parcel.replaceChild(storm, cloud0);
                                                                 setTimeout(function()
                                                                 {
-                                                                    parcel.replaceChild(storm, cloud0);
-                                                                    waiting=0;
-                                                                    tested=1;
+                                                                    parcel.replaceChild(cloud0, storm);
+                                                                    setTimeout(function()
+                                                                    {
+                                                                        parcel.replaceChild(storm, cloud0);
+                                                                        setTimeout(function()
+                                                                        {
+                                                                            parcel.replaceChild(cloud0, storm);
+                                                                            setTimeout(function()
+                                                                            {
+                                                                                parcel.replaceChild(storm, cloud0);
+                                                                                waiting=0;
+                                                                                tested=1;
+                                                                            }, 600);
+                                                                        }, 600);
+                                                                    }, 600);
                                                                 }, 600);
                                                             }, 600);
                                                         }, 600);
-                                                    }, 600);
+                                                    }
                                                 }, 600);
                                             }, 600);
-                                        }
+                                        }, 600);
                                     }, 600);
                                 }, 600);
                             }, 600);

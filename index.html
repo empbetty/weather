@@ -16,8 +16,8 @@
 
 
 		<div id="buttons" style="width:885px;height:70px">
-			<img src="image/testbutton.png" alt="testbutton" style="width:173px;height:67.5px" onclick="test()" draggable="false" class="testbutton">
-			<img src="image/undo.png" alt="undo" style="width:173px;height:67.5px" onclick="undo()" draggable="false" class="undo">
+			<img src="image/testbutton.png" alt="testbutton" style="width:223px;height:67px" onclick="test()" draggable="false" class="testbutton">
+			<img src="image/repbutton.png" alt="repbutton" style="width:223px;height:67px" onclick="undo()" draggable="false" class="repbutton">
 		</div>
 
 		<div id="atmosphere">
@@ -25,36 +25,41 @@
 			<img src="image/atmosphere.png" alt="atmosphere" style="width:885px;height:615px" draggable="false" class="atmosphere">
 
 			<div id="altitude">
-				<div id="div1" style="width:825px;height:92.5px" ondrop="drop(event)" ondragover="allowDrop(event)" ondragleave="dragLeave(event)" class="div">
-					<p id="dist1" class="dist" style="width:50px">30km</p>
-					<hr id="divider1" class="divider">
+				<div id="div1" style="width:830px;height:92.5px" ondrop="drop(event)" ondragover="allowDrop(event)" ondragleave="dragLeave(event)" class="div">
+<!-- 					<p id="dist1" class="dist" style="width:50px"></p>
+ -->					<hr id="divider1" class="divider">
 					<p id="atmotemp1" class="atmotemp">-50°C</p>
 				</div>
-				<div id="div2" style="width:825px;height:92.5px" ondrop="drop(event)" ondragover="allowDrop(event)" ondragleave="dragLeave(event)" class="div">
-					<p id="dist2" class="dist" style="width:50px">25km</p>
-					<hr id="divider2" class="divider">
+				<div id="div2" style="width:830px;height:92.5px" ondrop="drop(event)" ondragover="allowDrop(event)" ondragleave="dragLeave(event)" class="div">
+<!-- 					<p id="dist2" class="dist" style="width:50px"></p>
+ -->					<hr id="divider2" class="divider">
 					<p id="atmotemp2" class="atmotemp">-40°C</p>
 				</div>
-				<div id="div3" style="width:825px;height:92.5px" ondrop="drop(event)" ondragover="allowDrop(event)" ondragleave="dragLeave(event)" class="div">
-					<p id="dist3" class="dist" style="width:50px">20km</p>
-					<hr id="divider3" class="divider">
+				<div id="div3" style="width:830px;height:92.5px" ondrop="drop(event)" ondragover="allowDrop(event)" ondragleave="dragLeave(event)" class="div">
+<!-- 					<p id="dist3" class="dist" style="width:50px"></p>
+ -->					<hr id="divider3" class="divider">
 					<p id="atmotemp3" class="atmotemp">-30°C</p>
 				</div>				
-				<div id="div4" style="width:825px;height:92.5px" ondrop="drop(event)" ondragover="allowDrop(event)" ondragleave="dragLeave(event)" class="div">
-					<p id="dist4" class="dist" style="width:50px">15km</p>
-					<hr id="divider4" class="divider">
+				<div id="div4" style="width:830px;height:92.5px" ondrop="drop(event)" ondragover="allowDrop(event)" ondragleave="dragLeave(event)" class="div">
+<!-- 					<p id="dist4" class="dist" style="width:50px"></p>
+ -->					<hr id="divider4" class="divider">
 					<p id="atmotemp4" class="atmotemp">-20°C</p>
 				</div>				
-				<div id="div5" style="width:825px;height:92.5px" ondrop="drop(event)" ondragover="allowDrop(event)" ondragleave="dragLeave(event)" class="div">
-					<p id="dist5" class="dist" style="width:50px">10km</p>
-					<hr id="divider5" class="divider">
+				<div id="div5" style="width:830px;height:92.5px" ondrop="drop(event)" ondragover="allowDrop(event)" ondragleave="dragLeave(event)" class="div">
+<!-- 					<p id="dist5" class="dist" style="width:50px"></p>
+ -->					<hr id="divider5" class="divider">
 					<p id="atmotemp5" class="atmotemp">-10°C</p>
 				</div>				
-				<div id="div6" style="width:825px;height:92.5px" ondrop="drop(event)" ondragover="allowDrop(event)" ondragleave="dragLeave(event)" class="div">
-					<p id="dist6" class="dist" style="width:50px">5km</p>
-					<hr id="divider6" class="divider">
+				<div id="div6" style="width:830px;height:92.5px" ondrop="drop(event)" ondragover="allowDrop(event)" ondragleave="dragLeave(event)" class="div">
+<!-- 					<p id="dist6" class="dist" style="width:50px"></p>
+ -->					<hr id="divider6" class="divider">
 					<p id="atmotemp6" class="atmotemp">0°C</p>
-				</div>				
+				</div>		
+<!-- 				<div id="div7" style="width:830px;height:92.5px" ondrop="drop(event)" ondragover="allowDrop(event)" ondragleave="dragLeave(event)" class="div">
+					<p id="dist6" class="dist" style="width:50px"></p>
+					<hr id="divider7" class="divider">
+					<p id="atmotemp7" class="atmotemp">0°C</p>
+				</div>	 -->		
 			</div>
 
 		</div>
@@ -72,14 +77,18 @@
 			</div>
 
 			<div id="genbutton" class="button">
-				<img src="image/genbutton.png" alt="genbutton" style="width:180px;height:64px" onclick="gen()" draggable="false">
+				<img src="image/genbutton.png" alt="genbutton" style="width:180px;height:65px" onclick="gen()" draggable="false">
 			</div>
 
 			<div id="resetbutton" class="button">
-				<img src="image/resetbutton.png" alt="resetbutton" style="width:180px;height:64px" onclick="reset()" draggable="false">
+				<img src="image/resetbutton.png" alt="resetbutton" style="width:180px;height:65px" onclick="reset()" draggable="false">
+			</div>
+
+			<div id="legend" class="legend">
+				<img src="image/legend.png" alt="legend" style="width:120px;height:75px" draggable="false">
 			</div>
 			
-			<div id="parcel" class="parcel">
+			<div id="parcel" class="parcel" style="width:90px;height:90px">
 				<img src="image/parcel.png" alt="parcel" style="width:90px;height:90px" ondragstart="drag()" id="parcelpic" draggable="false">
 				<p id="temptext" style="width:35px"></p>
 			</div>

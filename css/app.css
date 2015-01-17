@@ -39,24 +39,31 @@
 #genbutton
 {
 	position: relative;
-	top: -395px;
+	top: -400px;
 	left: 14px;
 }
 
 #resetbutton
 {
 	position: relative;
-	top: -395px;
+	top: -410px;
 	left: 14px;
 }
 
 #parcel
 {
 	position: relative;
-	top: -365px;
+	top: -415px;
 	left: 59px;
 /*	width:111px;
 	height: 111px;*/
+}
+
+#legend
+{
+	position: relative;
+	top: -420px;
+	left: 45px;
 }
 
 #temptext
@@ -85,50 +92,50 @@
 	font-weight: 900;
 	text-shadow: none;
 	position: relative;
-	top: -574px;
-	left: 60px;
+	top: -564px;
+	left: 54px;
 }
 
 #div2
 {
 	position: relative;
-	top: -16.5px;
+	top: -9px;
 }
 
 #div3
 {
 	position: relative;
-	top: -33px;
+	top: -18px;
 }
 
 #div4
 {
 	position: relative;
-	top: -49.5px;
+	top: -27px;
 }
 
 #div5
 {
 	position: relative;
-	top: -65.5px;
+	top: -36px;
 }
 
 #div6
 {
 	position: relative;
-	top: -81.5px;
+	top: -45px;
 }
 
-#div7
+/*#div7
 {
 	position: relative;
-	top: -99px;
-}
+	top: -54px;
+}*/
 
 hr
 {
 	position: relative;
-	top: 55px;
+	top: 90px;
  	height: 12px;
     border: 0;
     box-shadow: inset 0 12px 12px -12px rgba(0,0,0,0.5);
@@ -136,18 +143,18 @@ hr
 */    width: 80%;
 }
 
-.dist{
+/*.dist{
 	position: relative;
 	top: 41px;
 	left: 20px;
-}
+}*/
 
 .atmotemp
 {
 	position: relative;
 	text-align: center;
-	top: -24px;
-	left: 387.5px;
+	top: 10px;
+	left: 390px;
 	width: 50px;
 /*	visibility: hidden;
 */
