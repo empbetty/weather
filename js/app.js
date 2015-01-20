@@ -130,7 +130,7 @@ function test() {
                 if (weather != 0) {
                     // make arrows
                     var arrow0=document.createElement("img");
-                    arrow0.src = "image/arrow50.png";
+                    arrow0.src = "image/arrow" + weather + "0.png";
                     arrow0.style.width = '139px';
                     arrow0.style.height = '142px';
                     arrow0.setAttribute('draggable', false);
@@ -138,7 +138,7 @@ function test() {
                     arrow0.style.left = '-23px';
                     arrow0.style.top = '-165px';
                     var arrow=document.createElement("img");
-                    arrow.src = "image/arrow5.png";
+                    arrow.src = "image/arrow" + weather + ".png";
                     arrow.style.width = '168px';
                     arrow.style.height = '171px';
                     arrow.setAttribute('draggable', false);
