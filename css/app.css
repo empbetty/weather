@@ -25,14 +25,14 @@
 #moistureslider
 {
 	position: relative;
-	top: -495px;
+	top: -426px;
 	left: -35px;
 }
 
 #tempslider
 {
 	position: relative;
-	top: -426px;
+	top: -493px;
 	left: -35px;
 }
 
@@ -53,7 +53,7 @@
 #parcel
 {
 	position: relative;
-	top: -415px;
+	top: -440px;
 	left: 59px;
 /*	width:111px;
 	height: 111px;*/
@@ -63,7 +63,28 @@
 {
 	position: relative;
 	top: -420px;
-	left: 45px;
+	left: 20px;
+}
+
+#vapor
+{
+	position: relative;
+	top: -492px;
+	left: 7px;
+}
+
+#water
+{
+	position: relative;
+	top: -470px;
+	left: -17px;
+}
+
+#rain
+{
+	position: relative;
+	top: -448px;
+	left: -42px;
 }
 
 #temptext
@@ -72,9 +93,9 @@
 	font-weight: 900;
 	text-shadow: none;
 	position: relative;
-	top: -40px;
-	left: 31px;
-	font-size: 14px;
+	top: -33px;
+	left: 40px;
+	font-size: 12px;
 	text-align: center;
 }
 

@@ -9,3 +9,5 @@ Updates Log
 v1.1: Improved user interface
 
 v1.2: Amount of arrow corresponds to different levels of energy giving out
+
+v2.0: Updated rules implemented

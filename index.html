@@ -68,12 +68,12 @@
 		<div id="panel">
 			<img src="image/panel.png" alt="panel" style="width:210px;height:615px" draggable="false" class="panel">
 
-			<div id="moistureslider" class="moistureslider" style="width:228px">
-				<input type="range" name="moisture" id="moisture" step="1" value="0" min="0" max="3" class="ui-hidden-accessible" data-mini="false" data-highlight="true"/>
+			<div id="tempslider" class="tempslider" style="width:228px">
+				<input type="range" data-show-value="true" name="temp" id="temp" value="0" step="10" min="0" max="30" class="ui-hidden-accessible" data-mini="false" data-highlight="true"/>
 			</div>
 
-			<div id="tempslider" class="tempslider" style="width:228px">
-				<input type="range" data-show-value="true" name="temp" id="temp" value="0" min="0" max="60" class="ui-hidden-accessible" data-mini="false" data-highlight="true"/>
+			<div id="moistureslider" class="moistureslider" style="width:228px">
+				<input type="range" name="moisture" id="moisture" step="1" value="0" min="0" max="3" class="ui-hidden-accessible" data-mini="false" data-highlight="true"/>
 			</div>
 
 			<div id="genbutton" class="button">
@@ -84,12 +84,15 @@
 				<img src="image/resetbutton.png" alt="resetbutton" style="width:180px;height:65px" onclick="reset()" draggable="false">
 			</div>
 
-			<div id="legend" class="legend">
-				<img src="image/legend.png" alt="legend" style="width:120px;height:75px" draggable="false">
+			<div class="legend">
+				<img src="image/legend.png" alt="legend" style="width:196px;height:70px" draggable="false" id="legend">
+				<img src="image/water-vapor.png" alt="legend" style="width:20px;height:20px" draggable="false" onclick="info(event)" id="vapor">
+				<img src="image/liquid-water.png" alt="legend" style="width:20px;height:20px" draggable="false" onclick="info(event)" id="water">
+				<img src="image/rain-drops.png" alt="legend" style="width:20px;height:20px" draggable="false" onclick="info(event)" id="rain">
 			</div>
 			
 			<div id="parcel" class="parcel" style="width:90px;height:90px">
-				<img src="image/parcel.png" alt="parcel" style="width:90px;height:90px" ondragstart="drag()" id="parcelpic" draggable="false">
+				<img src="image/0n.png" alt="parcel" style="width:90px;height:90px" ondragstart="drag()" id="parcelpic" draggable="false">
 				<p id="temptext" style="width:35px"></p>
 			</div>
 
